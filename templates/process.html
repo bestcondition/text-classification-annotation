@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>总览</title>
+</head>
+<body>
+{% for i in range(view.file_list | length) %}
+    <table class="table">
+        <tr>
+            <td class="file_index"></td>
+            <td>
+                <div id="file_{{ i }}" style="min-width: 500px"
+                     onclick="jump('{{ view.file_list[i] }}')">{{ view.file_list[i] }}</div>
+            </td>
+            <td>
+                <div id="is_label_{{ i }}">{{ '√' if view.name_done_map[view.file_list[i]] else '×' }}</div>
+            </td>
+        </tr>
+    </table>
+{% endfor %}
+</body>
+
+<script>
+    function jump(file) {
+        location.href = '/tech/' + file
+    }
+
+    //    (()=>{
+    let td_list = document.getElementsByClassName('file_index')
+    for (let i = 0; i < td_list.length; i++) {
+        td_list[i].innerHTML = '' + i
+    }
+    //    })()
+</script>
+</html>
