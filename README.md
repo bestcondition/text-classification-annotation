@@ -7,3 +7,7 @@ a simple text classification annotation tool based on flask and js. 一个基于
 小键盘个位
 
 点击总览上的文件名可以跳转到该文件页面  
+
+## 操作演示
+
+![](./media/screen_records.mov)
