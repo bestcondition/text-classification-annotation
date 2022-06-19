@@ -10,4 +10,4 @@ a simple text classification annotation tool based on flask and js. 一个基于
 
 ## 操作演示
 
-![](./media/screen_records.mov)
+![](./media/screen_records.gif)
